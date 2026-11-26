@@ -4,107 +4,178 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AUVRIXA | الفخامة بلا حدود</title>
+<title>AUVRIXA | Luxury Store</title>
 <style>
-*{box-sizing:border-box}
-body{
-margin:0;background:#090909;color:white;
-font-family:Arial,sans-serif;
-}
-header{
-padding:24px 12px;text-align:center;
-border-bottom:1px solid #b99b52;
-}
-.logo{
-color:#d5b66b;font-size:32px;
-letter-spacing:4px;font-weight:bold;
-}
-nav{margin-top:20px}
-nav a{
-color:white;text-decoration:none;
-margin:0 8px;font-size:13px;
-}
-.hero{
-text-align:center;padding:85px 15px;
-background:linear-gradient(135deg,#202020,#080808);
-}
-.hero h1{color:#d5b66b;font-size:32px}
-.hero p{color:#ddd;line-height:2}
-.btn{
-display:inline-block;background:#c6a65d;
-color:black;padding:14px 25px;
-text-decoration:none;font-weight:bold;
-}
-h2{text-align:center;color:#d5b66b;margin-top:40px}
-.products{
-display:grid;grid-template-columns:repeat(2,1fr);
-gap:14px;padding:18px;
-}
-.product{
-background:#181818;text-align:center;
-padding:20px 8px;border:1px solid #514329;
-}
-.symbol{font-size:40px}
-.product h3{color:#d5b66b}
-.product p{font-size:13px;color:#ccc}
-footer{
-text-align:center;padding:30px;
-color:#aaa;border-top:1px solid #444;
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--gold:#c9a75b;--bg:#090909;--card:#151515;--white:#f5f5f5}
+body{background:var(--bg);color:var(--white);font-family:Arial,sans-serif}
+a{text-decoration:none;color:inherit}
+header{text-align:center;padding:25px 15px;border-bottom:1px solid #3b301d}
+.logo{font-size:35px;letter-spacing:6px;color:var(--gold);font-weight:bold}
+nav{display:flex;justify-content:center;flex-wrap:wrap;gap:18px;margin-top:22px}
+nav a{font-size:14px}
+nav a:hover{color:var(--gold)}
+.hero{min-height:470px;padding:65px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle,#272116,#090909 70%)}
+.hero small{color:var(--gold);letter-spacing:4px;margin-bottom:25px}
+.hero h1{font-size:36px;color:var(--gold);margin-bottom:20px}
+.hero h2{font-size:23px;letter-spacing:3px;margin-bottom:20px}
+.hero p{color:#ccc;line-height:2}
+.btn{display:inline-block;margin-top:28px;padding:16px 30px;background:var(--gold);color:#000;font-weight:bold}
+.section{padding:55px 18px;text-align:center}
+.title{font-size:27px;color:var(--gold);margin-bottom:15px}
+.desc{color:#aaa;margin-bottom:35px;line-height:1.9}
+.categories{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;max-width:850px;margin:auto}
+.category{background:var(--card);border:1px solid #40331b;padding:28px 10px}
+.category .icon{font-size:40px;margin-bottom:15px}
+.category h3{color:var(--gold);font-size:17px;margin-bottom:12px}
+.category p{font-size:13px;color:#aaa}
+.products{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:950px;margin:auto}
+.product{background:var(--card);border:1px solid #3a301f;padding:12px}
+.visual{height:140px;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#292318,#111);font-size:60px;margin-bottom:15px}
+.product h3{font-size:15px}
+.price{color:var(--gold);margin:13px 0}
+.order{display:block;border:1px solid var(--gold);padding:12px;color:var(--gold);font-size:13px}
+.order:hover{background:var(--gold);color:#000}
+.about{background:#111;border-block:1px solid #302819}
+.about p{max-width:650px;margin:auto;color:#bbb;line-height:2.2}
+.contact{padding:50px 15px;text-align:center}
+.contact p{color:#aaa;margin:20px 0;line-height:2}
+footer{text-align:center;border-top:1px solid #302819;padding:25px;color:#777;font-size:12px}
+footer .logo{font-size:23px;margin-bottom:12px}
+@media(min-width:700px){
+.categories{grid-template-columns:repeat(4,1fr)}
+.products{grid-template-columns:repeat(3,1fr)}
+.hero{min-height:550px}
+.hero h1{font-size:52px}
 }
 </style>
 </head>
 <body>
 
 <header>
-<div class="logo">♛ AUVRIXA</div>
+<div class="logo">AUVRIXA ♛</div>
 <nav>
-<a href="#home">الرئيسية HOME</a>
-<a href="#products">المنتجات PRODUCTS</a>
-<a href="#contact">اتصل بنا CONTACT</a>
+<a href="#home">الرئيسية | HOME</a>
+<a href="#categories">مجموعتنا | COLLECTION</a>
+<a href="#products">المنتجات | PRODUCTS</a>
+<a href="#contact">اتصل بنا | CONTACT</a>
 </nav>
 </header>
 
 <section class="hero" id="home">
+<small>WELCOME TO AUVRIXA</small>
 <h1>اكتشف عالم الفخامة</h1>
 <h2>DISCOVER LUXURY</h2>
-<p>أناقة تليق بك | Elegance in Every Detail</p>
-<a href="#products" class="btn">اكتشف مجموعتنا EXPLORE</a>
+<p>أناقة تليق بك في كل التفاصيل</p>
+<p>Elegance in Every Detail</p>
+<a class="btn" href="#categories">اكتشف مجموعتنا | EXPLORE</a>
 </section>
 
-<h2 id="products">مجموعتنا | OUR COLLECTION</h2>
+<section class="section" id="categories">
+<h2 class="title">مجموعتنا | OUR COLLECTION</h2>
+<p class="desc">اكتشف اختياراتنا المصممة لتمنحك التميز</p>
+<div class="categories">
 
-<section class="products">
-<div class="product">
-<div class="symbol">⌚</div>
+<a class="category" href="#products">
+<div class="icon">⌚</div>
 <h3>الساعات | WATCHES</h3>
 <p>أناقة لكل وقت</p>
-</div>
+</a>
 
-<div class="product">
-<div class="symbol">💍</div>
+<a class="category" href="#products">
+<div class="icon">💎</div>
 <h3>المجوهرات | JEWELRY</h3>
 <p>جمال يلفت الأنظار</p>
-</div>
+</a>
 
-<div class="product">
-<div class="symbol">👜</div>
-<h3>الإكسسوارات | ACCESSORIES</h3>
-<p>أضف لمستك الخاصة</p>
-</div>
-
-<div class="product">
-<div class="symbol">🕶️</div>
+<a class="category" href="#products">
+<div class="icon">🕶️</div>
 <h3>الأناقة | FASHION</h3>
 <p>تميز بأسلوبك</p>
+</a>
+
+<a class="category" href="#products">
+<div class="icon">👜</div>
+<h3>الإكسسوارات | ACCESSORIES</h3>
+<p>أضف لمستك الخاصة</p>
+</a>
+
 </div>
 </section>
 
-<footer id="contact">
-<p>تواصل معنا | CONTACT US</p>
-<p>♛ AUVRIXA</p>
-<p>الفخامة بلا حدود | Luxury Without Limits</p>
-<p>© 2026 AUVRIXA</p>
+<section class="section" id="products">
+<h2 class="title">منتجاتنا | FEATURED</h2>
+<p class="desc">اختيارات مميزة تناسب أسلوبك</p>
+
+<div class="products">
+
+<div class="product">
+<div class="visual">⌚</div>
+<h3>ساعة كلاسيكية</h3>
+<p class="price">السعر قريبًا</p>
+<a class="order" href="https://wa.me/2130557372835?text=مرحبا،%20أريد%20الاستفسار%20عن%20ساعة" target="_blank">اطلب عبر واتساب</a>
+</div>
+
+<div class="product">
+<div class="visual">💎</div>
+<h3>إكسسوار أنيق</h3>
+<p class="price">السعر قريبًا</p>
+<a class="order" href="https://wa.me/2130557372835?text=مرحبا،%20أريد%20الاستفسار%20عن%20الإكسسوار" target="_blank">اطلب عبر واتساب</a>
+</div>
+
+<div class="product">
+<div class="visual">🕶️</div>
+<h3>نظارات عصرية</h3>
+<p class="price">السعر قريبًا</p>
+<a class="order" href="https://wa.me/2130557372835?text=مرحبا،%20أريد%20الاستفسار%20عن%20النظارات" target="_blank">اطلب عبر واتساب</a>
+</div>
+
+<div class="product">
+<div class="visual">👜</div>
+<h3>حقيبة أنيقة</h3>
+<p class="price">السعر قريبًا</p>
+<a class="order" href="https://wa.me/2130557372835?text=مرحبا،%20أريد%20الاستفسار%20عن%20حقيبة" target="_blank">اطلب عبر واتساب</a>
+</div>
+
+<div class="product">
+<div class="visual">👑</div>
+<h3>قطعة فاخرة</h3>
+<p class="price">السعر قريبًا</p>
+<a class="order" href="https://wa.me/2130557372835?text=مرحبا،%20أريد%20الاستفسار%20عن%20قطعة" target="_blank">اطلب عبر واتساب</a>
+</div>
+
+<div class="product">
+<div class="visual">🎁</div>
+<h3>هدية مميزة</h3>
+<p class="price">السعر قريبًا</p>
+<a class="order" href="https://wa.me/2130557372835?text=مرحبا،%20أريد%20الاستفسار%20عن%20هدية" target="_blank">اطلب عبر واتساب</a>
+</div>
+
+</div>
+</section>
+
+<section class="section about">
+<h2 class="title">AUVRIXA</h2>
+<p>
+نؤمن أن الأناقة ليست مجرد مظهر، بل أسلوب يعكس شخصيتك.
+اكتشف مجموعتنا المختارة بعناية، واجعل كل تفصيل يعبر عنك.
+<br>
+Luxury is not just a look. It's a lifestyle.
+</p>
+</section>
+
+<section class="contact" id="contact">
+<h2 class="title">تواصل معنا | CONTACT US</h2>
+<p>نحن هنا لمساعدتك في اختيار ما يناسبك.</p>
+<a class="btn" href="https://wa.me/2130557372835?text=مرحبا%20AUVRIXA" target="_blank">تواصل عبر واتساب</a>
+</section>
+
+<footer>
+<div class="logo">AUVRIXA ♛</div>
+<p>Elegance in Every Detail</p>
+<p style="margin-top:12px">© 2026 AUVRIXA. All Rights Reserved.</p>
 </footer>
 
 </body>
 </html>
+
