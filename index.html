@@ -1,679 +1,232 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#090909">
-<meta name="description" content="AUVRIXA - اكتشف الأناقة والفخامة في عالم الإكسسوارات.">
-<title>AUVRIXA | Elegance in Every Detail</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AUVRIXA | ساعات ومجوهرات وإكسسوارات - توصيل لـ 58 ولاية</title>
+<meta name="description" content="AUVRIXA: ساعات، مجوهرات وإكسسوارات للنساء والرجال. توصيل لكل ولايات الجزائر والدفع عند الاستلام.">
+<meta name="theme-color" content="#14110d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap');
-
 :root{
-  --gold:#c7a35b;
-  --gold-light:#e4c982;
-  --black:#080808;
-  --surface:#111111;
-  --surface2:#171717;
-  --white:#f6f3ed;
-  --muted:#a6a29b;
-  --border:rgba(199,163,91,.22);
+  --bg:#14110d; --panel:#1d1912; --line:#3a3226;
+  --text:#f3ecde; --muted:#b5a98f; --gold:#d4af6a; --gold-d:#a8854a;
+  --wa:#25a05a;
 }
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--text);font-family:'Tajawal',Tahoma,sans-serif;line-height:1.8;font-size:16px}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+h1,h2,h3{font-family:'Amiri','Times New Roman',serif;font-weight:700;line-height:1.35}
 
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  background:var(--black);
-  color:var(--white);
-  font-family:'Cairo',Arial,sans-serif;
-  overflow-x:hidden;
-}
-a{text-decoration:none;color:inherit}
-button{font-family:inherit}
-.container{width:min(1160px,92%);margin:auto}
-
-/* Announcement */
-.announcement{
-  text-align:center;
-  padding:9px 12px;
-  background:var(--gold);
-  color:#111;
-  font-size:11px;
-  font-weight:700;
-  letter-spacing:1px;
-}
-
-/* Header */
-header{
-  background:rgba(8,8,8,.96);
-  border-bottom:1px solid var(--border);
-}
-.header-inner{
-  min-height:85px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-}
-.logo{
-  color:var(--gold);
-  font-family:'Playfair Display',serif;
-  font-size:27px;
-  font-weight:700;
-  letter-spacing:4px;
-  white-space:nowrap;
-}
-.logo span{color:#fff}
-nav{display:flex;align-items:center;gap:27px}
-nav a{font-size:13px;color:#d2d0ca;transition:.25s}
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(20,17,13,.95);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:'Amiri',serif;font-size:1.5rem;letter-spacing:.18em;color:var(--gold)}
+nav{display:flex;gap:18px;font-size:.95rem}
+nav a{color:var(--muted)}
 nav a:hover{color:var(--gold)}
-.header-cta{
-  border:1px solid var(--gold);
-  padding:10px 17px;
-  color:var(--gold);
-  font-size:12px;
-  transition:.25s;
-}
-.header-cta:hover{background:var(--gold);color:#000}
+@media(max-width:560px){nav a:nth-child(n+4){display:none}nav{gap:14px}}
 
-/* HERO */
-.hero{
-  min-height:590px;
-  position:relative;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
-  background:
-    radial-gradient(ellipse at 75% 48%,rgba(130,95,40,.18),transparent 48%),
-    linear-gradient(110deg,#080808 15%,#111 60%,#19140d 100%);
-}
-.hero:before{
-  content:"";
-  position:absolute;
-  width:390px;height:390px;
-  border:1px solid rgba(199,163,91,.17);
-  border-radius:50%;
-  left:-100px;top:50%;
-  transform:translateY(-50%);
-  box-shadow:0 0 0 35px rgba(199,163,91,.025),
-             0 0 0 75px rgba(199,163,91,.025);
-}
-.hero:after{
-  content:"A";
-  position:absolute;
-  left:7%;top:50%;
-  transform:translateY(-50%);
-  font-family:'Playfair Display',serif;
-  font-size:clamp(240px,40vw,480px);
-  font-weight:500;
-  color:rgba(199,163,91,.045);
-  pointer-events:none;
-}
-.hero-content{
-  position:relative;
-  z-index:2;
-  max-width:670px;
-  padding:85px 0;
-}
-.eyebrow{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  color:var(--gold);
-  font-size:11px;
-  letter-spacing:3px;
-  margin-bottom:25px;
-}
-.eyebrow:before{
-  content:"";
-  width:32px;height:1px;background:var(--gold);
-}
-.hero h1{
-  font-size:clamp(38px,7vw,70px);
-  line-height:1.5;
-  font-weight:700;
-  margin-bottom:8px;
-}
-.hero h1 span{color:var(--gold)}
-.hero-en{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(19px,3vw,27px);
-  letter-spacing:4px;
-  color:#ddd;
-  margin-bottom:22px;
-}
-.hero p{
-  color:#b6b3ac;
-  line-height:2.2;
-  font-size:14px;
-  max-width:480px;
-}
-.hero-actions{
-  display:flex;
-  gap:13px;
-  flex-wrap:wrap;
-  margin-top:34px;
-}
-.btn-primary,.btn-outline{
-  min-height:49px;
-  padding:13px 25px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  font-size:13px;
-  transition:.25s;
-}
-.btn-primary{
-  background:var(--gold);
-  color:#090909;
-  font-weight:700;
-}
-.btn-primary:hover{background:var(--gold-light)}
-.btn-outline{
-  border:1px solid rgba(255,255,255,.25);
-  color:#eee;
-}
-.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
-.hero-note{
-  margin-top:48px;
-  font-size:10px;
-  color:#777;
-  letter-spacing:2px;
-}
+/* hero */
+.hero{padding:64px 0 48px;text-align:center;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(2rem,6vw,3.4rem);color:var(--text);margin-bottom:12px}
+.hero p{color:var(--muted);max-width:520px;margin:0 auto 26px}
+.btn{display:inline-block;padding:11px 26px;border:1px solid var(--gold);color:var(--gold);border-radius:2px;font-weight:500;cursor:pointer;background:none;font-family:inherit;font-size:1rem}
+.btn:hover{background:var(--gold);color:var(--bg)}
+.btn.solid{background:var(--gold);color:var(--bg)}
+.btn.solid:hover{background:var(--gold-d);border-color:var(--gold-d)}
+.perks{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;margin-top:30px;color:var(--muted);font-size:.92rem}
 
-/* Sections */
-.section{padding:85px 0}
-.section-head{text-align:center;margin-bottom:42px}
-.section-label{
-  color:var(--gold);
-  font-size:11px;
-  letter-spacing:3px;
-  margin-bottom:12px;
-}
-.section-title{font-size:29px;font-weight:700;margin-bottom:12px}
-.section-desc{
-  color:var(--muted);
-  font-size:13px;
-  line-height:2;
-}
+/* sections */
+section{padding:52px 0}
+.sec-title{font-size:1.9rem;margin-bottom:6px}
+.sec-sub{color:var(--muted);margin-bottom:24px}
 
-/* Categories */
-.categories{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:16px;
-}
-.category{
-  position:relative;
-  background:linear-gradient(160deg,#171717,#0d0d0d);
-  border:1px solid var(--border);
-  padding:30px 15px;
-  text-align:center;
-  transition:.3s;
-  overflow:hidden;
-}
-.category:after{
-  content:"";
-  position:absolute;
-  height:1px;
-  background:var(--gold);
-  width:0;
-  bottom:0;right:0;
-  transition:.3s;
-}
-.category:hover{
-  transform:translateY(-5px);
-  border-color:rgba(199,163,91,.5);
-}
-.category:hover:after{width:100%}
-.category-icon{
-  font-size:34px;
-  margin-bottom:17px;
-  filter:grayscale(.2);
-}
-.category h3{font-size:15px;margin-bottom:8px;color:var(--gold-light)}
-.category p{font-size:11px;color:#888}
+/* filters */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.filters button{padding:7px 20px;border:1px solid var(--line);background:none;color:var(--muted);border-radius:30px;cursor:pointer;font-family:inherit;font-size:.95rem}
+.filters button[aria-pressed="true"]{border-color:var(--gold);color:var(--gold)}
 
-/* Products */
-.products{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-.product{
-  background:#111;
-  border:1px solid rgba(255,255,255,.07);
-  padding:12px;
-  transition:.3s;
-}
-.product:hover{border-color:var(--border);transform:translateY(-3px)}
-.product-visual{
-  min-height:220px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:
-    radial-gradient(ellipse at center,rgba(199,163,91,.12),transparent 70%),
-    linear-gradient(145deg,#1b1b1b,#0a0a0a);
-  font-size:68px;
-  position:relative;
-}
-.product-visual small{
-  position:absolute;
-  top:12px;right:12px;
-  background:#242016;
-  color:var(--gold);
-  padding:5px 9px;
-  font-size:10px;
-}
-.product-info{padding:18px 8px 8px}
-.product h3{font-size:15px;font-weight:600}
-.product p{color:#8f8c85;font-size:12px;margin-top:8px}
-.price{color:var(--gold);font-size:14px;font-weight:700;margin:16px 0}
-.order-btn{
-  display:block;
-  text-align:center;
-  border:1px solid var(--border);
-  color:var(--gold);
-  padding:12px;
-  font-size:12px;
-  transition:.25s;
-}
-.order-btn:hover{background:var(--gold);color:#000}
+/* products */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);display:flex;flex-direction:column}
+.thumb{aspect-ratio:1/1;background:#2a241a;display:flex;align-items:center;justify-content:center;font-size:3.4rem;overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:4px;flex:1}
+.card h3{font-size:1.2rem}
+.card .for{color:var(--muted);font-size:.85rem}
+.price{color:var(--gold);font-weight:700;font-size:1.15rem;margin:4px 0 10px}
+.price small{font-weight:400;color:var(--muted);font-size:.85rem}
+.card .btn{margin-top:auto;text-align:center;background:var(--wa);border-color:var(--wa);color:#fff;font-size:.95rem;padding:9px 12px}
+.card .btn:hover{background:#1d7e45;border-color:#1d7e45}
 
-/* Brand feature */
-.feature{
-  background:
-    radial-gradient(ellipse at 80% 50%,rgba(199,163,91,.10),transparent 60%),
-    #101010;
-  border-block:1px solid var(--border);
-}
-.feature-inner{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  align-items:center;
-  gap:45px;
-}
-.feature-mark{
-  min-height:300px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border:1px solid var(--border);
-  background:radial-gradient(circle,#211c12,#0b0b0b 70%);
-}
-.feature-mark div{
-  text-align:center;
-  color:var(--gold);
-  font-family:'Playfair Display',serif;
-}
-.feature-mark strong{
-  display:block;
-  font-size:100px;
-  font-weight:500;
-  line-height:1;
-}
-.feature-mark small{
-  letter-spacing:5px;
-  font-size:13px;
-}
-.feature-text .section-title{text-align:right}
-.feature-text p{
-  color:#aaa;
-  line-height:2.3;
-  font-size:13px;
-  margin-top:17px;
-}
+/* delivery */
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.info div{border:1px solid var(--line);padding:18px;background:var(--panel)}
+.info h3{font-size:1.15rem;color:var(--gold);margin-bottom:6px}
+.info p{color:var(--muted);font-size:.95rem}
+.steps{list-style:none;counter-reset:s;display:grid;gap:10px;margin-top:6px}
+.steps li{counter-increment:s;padding-right:38px;position:relative;color:var(--muted)}
+.steps li::before{content:counter(s);position:absolute;right:0;top:2px;width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);text-align:center;line-height:24px;font-size:.85rem}
 
-/* Benefits */
-.benefits{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-.benefit{
-  border:1px solid rgba(255,255,255,.08);
-  background:#101010;
-  padding:28px 17px;
-  text-align:center;
-}
-.benefit-icon{font-size:27px;margin-bottom:13px}
-.benefit h3{color:var(--gold);font-size:14px;margin-bottom:10px}
-.benefit p{color:#999;font-size:12px;line-height:2}
+/* contact */
+.contact{text-align:center;background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.socials{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:20px}
 
-/* Contact */
-.contact{
-  text-align:center;
-  background:linear-gradient(180deg,#14120d,#090909);
-  border-top:1px solid var(--border);
-}
-.contact p{
-  max-width:500px;
-  margin:15px auto 27px;
-  color:#aaa;
-  line-height:2;
-  font-size:13px;
-}
+footer{padding:26px 0 90px;text-align:center;color:var(--muted);font-size:.85rem}
 
-/* Footer */
-footer{
-  padding:35px 0 20px;
-  border-top:1px solid var(--border);
-  text-align:center;
-}
-.footer-logo{font-family:'Playfair Display',serif;color:var(--gold);font-size:23px;letter-spacing:4px}
-.footer-tag{font-size:10px;color:#777;letter-spacing:2px;margin:9px 0 20px}
-.footer-links{
-  display:flex;justify-content:center;gap:20px;flex-wrap:wrap;
-  margin-bottom:22px;
-}
-.footer-links a{font-size:11px;color:#999}
-.footer-links a:hover{color:var(--gold)}
-.copyright{border-top:1px solid #1d1d1d;padding-top:18px;color:#666;font-size:10px}
-
-/* WhatsApp floating */
-.whatsapp-float{
-  position:fixed;
-  bottom:20px;left:18px;
-  width:54px;height:54px;
-  border-radius:50%;
-  background:#25D366;
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:25px;
-  z-index:99;
-  box-shadow:0 4px 20px rgba(0,0,0,.4);
-}
-
-/* Responsive */
-@media(max-width:850px){
-  .header-inner{flex-direction:column;padding:20px 0;gap:16px}
-  nav{gap:15px;flex-wrap:wrap;justify-content:center}
-  nav a{font-size:12px}
-  .header-cta{display:none}
-  .hero{min-height:500px}
-  .hero-content{padding:75px 0}
-  .hero:before{width:250px;height:250px;left:-100px}
-  .categories{grid-template-columns:repeat(2,1fr)}
-  .products{grid-template-columns:repeat(2,1fr)}
-  .product-visual{min-height:170px}
-  .feature-inner{grid-template-columns:1fr;gap:25px}
-  .feature-mark{min-height:230px}
-  .feature-text .section-title{text-align:center}
-  .benefits{grid-template-columns:1fr}
-}
-@media(max-width:480px){
-  .logo{font-size:23px;letter-spacing:3px}
-  nav{gap:12px}
-  nav a{font-size:11px}
-  .hero{min-height:480px}
-  .hero h1{font-size:36px}
-  .hero-en{font-size:17px;letter-spacing:2px}
-  .hero p{font-size:12px}
-  .section{padding:60px 0}
-  .section-title{font-size:24px}
-  .categories{gap:10px}
-  .category{padding:23px 8px}
-  .products{gap:10px}
-  .product{padding:8px}
-  .product-visual{min-height:145px;font-size:48px}
-  .product-info{padding:13px 5px 5px}
-  .product h3{font-size:13px}
-  .order-btn{font-size:11px;padding:10px 5px}
-  .feature-mark strong{font-size:75px}
-}
+/* floating whatsapp */
+.fab{position:fixed;bottom:18px;left:18px;background:var(--wa);color:#fff;padding:11px 18px;border-radius:40px;font-weight:700;z-index:30;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
-
 <body>
 
-<div class="announcement">
-  AUVRIXA — الأناقة تبدأ من التفاصيل
-</div>
-
 <header>
-  <div class="container header-inner">
-    <a href="#home" class="logo">AUVRIXA <span>♛</span></a>
-
+  <div class="wrap">
+    <a href="#top" class="logo">AUVRIXA</a>
     <nav>
-      <a href="#home">الرئيسية</a>
-      <a href="#categories">مجموعتنا</a>
       <a href="#products">المنتجات</a>
-      <a href="#contact">اتصل بنا</a>
+      <a href="#delivery">التوصيل</a>
+      <a href="#order">كيف تطلب</a>
+      <a href="#contact">تواصل</a>
     </nav>
-
-    <a class="header-cta" href="#products">اكتشف المنتجات</a>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="container">
-    <div class="hero-content">
-      <div class="eyebrow">WELCOME TO AUVRIXA</div>
-
-      <h1>اكتشف عالم <span>الفخامة</span></h1>
-
-      <div class="hero-en">ELEGANCE IN EVERY DETAIL</div>
-
-      <p>
-        اختيارات تعكس ذوقك، تفاصيل تمنحك التميز،
-        وأناقة ترافقك في كل لحظة.
-        اكتشف مجموعتنا واختر ما يناسب أسلوبك.
-      </p>
-
-      <div class="hero-actions">
-        <a href="#products" class="btn-primary">تسوق مجموعتنا</a>
-        <a href="#categories" class="btn-outline">اكتشف التصنيفات</a>
-      </div>
-
-      <div class="hero-note">STYLE · ELEGANCE · DISTINCTION</div>
-    </div>
-  </div>
-</section>
-
-<!-- CATEGORIES -->
-<section class="section" id="categories">
-  <div class="container">
-    <div class="section-head">
-      <div class="section-label">OUR COLLECTION</div>
-      <h2 class="section-title">اكتشف مجموعتنا</h2>
-      <p class="section-desc">اختيارات مميزة تضيف لمسة خاصة إلى أسلوبك</p>
-    </div>
-
-    <div class="categories">
-      <a class="category" href="#products">
-        <div class="category-icon">⌚</div>
-        <h3>الساعات</h3>
-        <p>أناقة لكل وقت</p>
-      </a>
-
-      <a class="category" href="#products">
-        <div class="category-icon">💎</div>
-        <h3>المجوهرات</h3>
-        <p>جمال يلفت الأنظار</p>
-      </a>
-
-      <a class="category" href="#products">
-        <div class="category-icon">🕶️</div>
-        <h3>النظارات</h3>
-        <p>تميز بأسلوبك</p>
-      </a>
-
-      <a class="category" href="#products">
-        <div class="category-icon">👜</div>
-        <h3>الإكسسوارات</h3>
-        <p>أضف لمستك الخاصة</p>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- PRODUCTS -->
-<section class="section" id="products">
-  <div class="container">
-    <div class="section-head">
-      <div class="section-label">SELECTED FOR YOU</div>
-      <h2 class="section-title">منتجات مختارة</h2>
-      <p class="section-desc">اكتشف القطع التي تعكس ذوقك وشخصيتك</p>
-    </div>
-
-    <div class="products">
-
-      <div class="product">
-        <div class="product-visual">⌚<small>مختار بعناية</small></div>
-        <div class="product-info">
-          <h3>ساعة كلاسيكية</h3>
-          <p>تصميم أنيق يناسب مختلف المناسبات</p>
-          <div class="price">السعر يُعلن قريبًا</div>
-          <a class="order-btn" href="https://wa.me/213557372835?text=السلام%20عليكم،%20أريد%20الاستفسار%20عن%20ساعة%20كلاسيكية" target="_blank" rel="noopener">استفسر عبر واتساب</a>
-        </div>
-      </div>
-
-      <div class="product">
-        <div class="product-visual">💎<small>مختار بعناية</small></div>
-        <div class="product-info">
-          <h3>إكسسوار أنيق</h3>
-          <p>تفاصيل تضيف لمسة مميزة لإطلالتك</p>
-          <div class="price">السعر يُعلن قريبًا</div>
-          <a class="order-btn" href="https://wa.me/213557372835?text=السلام%20عليكم،%20أريد%20الاستفسار%20عن%20إكسسوار" target="_blank" rel="noopener">استفسر عبر واتساب</a>
-        </div>
-      </div>
-
-      <div class="product">
-        <div class="product-visual">🕶️<small>مختار بعناية</small></div>
-        <div class="product-info">
-          <h3>نظارات عصرية</h3>
-          <p>أسلوب عصري وحضور مميز</p>
-          <div class="price">السعر يُعلن قريبًا</div>
-          <a class="order-btn" href="https://wa.me/213557372835?text=السلام%20عليكم،%20أريد%20الاستفسار%20عن%20نظارات" target="_blank" rel="noopener">استفسر عبر واتساب</a>
-        </div>
-      </div>
-
-      <div class="product">
-        <div class="product-visual">👜<small>مختار بعناية</small></div>
-        <div class="product-info">
-          <h3>حقيبة أنيقة</h3>
-          <p>لمسة تكمّل أناقتك</p>
-          <div class="price">السعر يُعلن قريبًا</div>
-          <a class="order-btn" href="https://wa.me/213557372835?text=السلام%20عليكم،%20أريد%20الاستفسار%20عن%20حقيبة" target="_blank" rel="noopener">استفسر عبر واتساب</a>
-        </div>
-      </div>
-
-      <div class="product">
-        <div class="product-visual">👑<small>مختار بعناية</small></div>
-        <div class="product-info">
-          <h3>قطعة مميزة</h3>
-          <p>اختيار يمنحك حضورًا مختلفًا</p>
-          <div class="price">السعر يُعلن قريبًا</div>
-          <a class="order-btn" href="https://wa.me/213557372835?text=السلام%20عليكم،%20أريد%20الاستفسار%20عن%20قطعة%20مميزة" target="_blank" rel="noopener">استفسر عبر واتساب</a>
-        </div>
-      </div>
-
-      <div class="product">
-        <div class="product-visual">🎁<small>مختار بعناية</small></div>
-        <div class="product-info">
-          <h3>هدية مميزة</h3>
-          <p>هدية جميلة لمن يستحق التميز</p>
-          <div class="price">السعر يُعلن قريبًا</div>
-          <a class="order-btn" href="https://wa.me/213557372835?text=السلام%20عليكم،%20أريد%20الاستفسار%20عن%20هدية" target="_blank" rel="noopener">استفسر عبر واتساب</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- BRAND -->
-<section class="section feature about" id="about">
-  <div class="container feature-inner">
-    <div class="feature-mark">
-      <div>
-        <strong>A</strong>
-        <small>AUVRIXA</small>
-      </div>
-    </div>
-    <div class="feature-text">
-      <div class="section-label">OUR BRAND</div>
-      <h2 class="section-title">الفخامة في كل تفصيل</h2>
-      <p>
-        في AUVRIXA نؤمن أن الأناقة ليست مجرد مظهر،
-        بل أسلوب يعكس الشخصية والذوق.
-        نطمح إلى تقديم تجربة تسوق مميزة،
-        واختيارات تضيف لمسة خاصة إلى يومك.
-      </p>
-      <p>Luxury is not just a look. It's a lifestyle.</p>
-    </div>
-  </div>
-</section>
-
-<!-- BENEFITS -->
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <div class="section-label">THE AUVRIXA EXPERIENCE</div>
-      <h2 class="section-title">تجربة تسوق مميزة</h2>
-      <p class="section-desc">نعمل على جعل تجربتك واضحة، بسيطة ومريحة</p>
-    </div>
-
-    <div class="benefits">
-      <div class="benefit">
-        <div class="benefit-icon">✦</div>
-        <h3>اختيارات بعناية</h3>
-        <p>نعمل على اختيار منتجات تجمع بين الشكل الجميل والقيمة المناسبة.</p>
-      </div>
-
-      <div class="benefit">
-        <div class="benefit-icon">◇</div>
-        <h3>تواصل واضح</h3>
-        <p>يمكنك التواصل معنا للاستفسار عن المنتجات وتفاصيل الطلب قبل الشراء.</p>
-      </div>
-
-      <div class="benefit">
-        <div class="benefit-icon">♧</div>
-        <h3>تجربة سهلة</h3>
-        <p>نسعى إلى توفير تجربة تصفح وطلب سهلة من هاتفك.</p>
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <h1>ساعات ومجوهرات وإكسسوارات<br>للنساء والرجال</h1>
+      <p>قطع مختارة بعناية، تصلك لباب بيتك في كل ولايات الجزائر، وتدفع عند الاستلام.</p>
+      <a href="#products" class="btn solid">شاهد المنتجات</a>
+      <div class="perks">
+        <span>توصيل لـ 58 ولاية</span>
+        <span>الدفع عند الاستلام</span>
+        <span>الرد على واتساب</span>
       </div>
     </div>
   </div>
-</section>
 
-<!-- CONTACT -->
-<section class="section contact" id="contact">
-  <div class="container">
-    <div class="section-label">WE ARE HERE FOR YOU</div>
-    <h2 class="section-title">هل تحتاج إلى مساعدة؟</h2>
-    <p>تواصل معنا للاستفسار عن المنتجات أو للحصول على معلومات قبل إتمام طلبك.</p>
-    <a class="btn-primary" href="https://wa.me/213557372835?text=السلام%20عليكم%20AUVRIXA،%20أريد%20الاستفسار" target="_blank" rel="noopener">تواصل معنا عبر واتساب</a>
-  </div>
-</section>
+  <section id="products">
+    <div class="wrap">
+      <h2 class="sec-title">المنتجات</h2>
+      <p class="sec-sub">اضغط على «اطلب عبر واتساب» وسنؤكد لك الطلب فورًا.</p>
+      <div class="filters" id="filters" role="group" aria-label="تصفية المنتجات">
+        <button data-f="all" aria-pressed="true">الكل</button>
+        <button data-f="نسائي" aria-pressed="false">نسائي</button>
+        <button data-f="رجالي" aria-pressed="false">رجالي</button>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
 
-<!-- FOOTER -->
+  <section id="delivery" style="padding-top:0">
+    <div class="wrap">
+      <h2 class="sec-title">التوصيل والدفع</h2>
+      <p class="sec-sub">كل ما تحتاج معرفته قبل الطلب.</p>
+      <div class="info">
+        <div><h3>التوصيل</h3><p>نوصّل إلى كل الولايات. مدة التوصيل: 2 إلى 5 أيام حسب ولايتك.</p></div>
+        <div><h3>سعر التوصيل</h3><p>يختلف حسب الولاية (إلى المنزل أو إلى المكتب). نخبرك به قبل تأكيد الطلب.</p></div>
+        <div><h3>الدفع</h3><p>الدفع عند الاستلام. لا تدفع شيئًا قبل أن تعاين طلبك.</p></div>
+        <div><h3>الاستبدال</h3><p>إذا وصلتك قطعة بها عيب أو غير مطابقة للطلب، راسلنا في نفس اليوم ونستبدلها.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="order" style="padding-top:0">
+    <div class="wrap">
+      <h2 class="sec-title">كيف تطلب؟</h2>
+      <ol class="steps">
+        <li>اختر المنتج واضغط «اطلب عبر واتساب».</li>
+        <li>أرسل لنا اسمك، ولايتك، وعنوانك ورقم هاتفك.</li>
+        <li>نؤكد لك الطلب وسعر التوصيل.</li>
+        <li>تستلم طلبك وتدفع للموزّع.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2 class="sec-title">تواصل معنا</h2>
+      <p class="sec-sub" style="margin-bottom:0">نرد عليك في أقرب وقت. اختر الطريقة الأنسب لك.</p>
+      <div class="socials">
+        <a class="btn solid" href="https://wa.me/213557372835?text=السلام%20عليكم%20AUVRIXA،%20أريد%20الاستفسار" target="_blank" rel="noopener">واتساب</a>
+        <a class="btn" href="https://www.instagram.com/auvrixa_/" target="_blank" rel="noopener">إنستغرام</a>
+        <a class="btn" href="https://m.me/auvrixa" target="_blank" rel="noopener">ماسنجر</a>
+        <!-- ضع رابط صفحة الفيسبوك الخاصة بك مكان # ثم احذف هذا التعليق -->
+        <a class="btn" href="#" target="_blank" rel="noopener">فيسبوك</a>
+      </div>
+    </div>
+  </section>
+</main>
+
 <footer>
-  <div class="container">
-    <div class="footer-logo">AUVRIXA ♛</div>
-    <div class="footer-tag">ELEGANCE IN EVERY DETAIL</div>
-
-    <div class="footer-links">
-      <a href="#home">الرئيسية</a>
-      <a href="#categories">مجموعتنا</a>
-      <a href="#products">المنتجات</a>
-      <a href="#about">من نحن</a>
-      <a href="#contact">تواصل معنا</a>
-    </div>
-
-    <div class="copyright">
-      © 2026 AUVRIXA. All Rights Reserved.
-    </div>
-  </div>
+  <div class="wrap">© 2026 AUVRIXA. جميع الحقوق محفوظة.</div>
 </footer>
 
-<!-- WhatsApp Floating Button -->
-<a class="whatsapp-float" href="https://wa.me/213557372835?text=السلام%20عليكم%20AUVRIXA" target="_blank" rel="noopener" aria-label="WhatsApp">◉</a>
+<a class="fab" href="https://wa.me/213557372835?text=السلام%20عليكم%20AUVRIXA،%20أريد%20الاستفسار" target="_blank" rel="noopener">واتساب</a>
 
+<script>
+/* ============================================================
+   عدّل المنتجات من هنا فقط. كل منتج بين { }.
+   name  : اسم المنتج
+   for   : "نسائي" أو "رجالي"
+   price : السعر بالدينار (اكتب 0 إذا ما تريد إظهار السعر)
+   image : مسار الصورة، مثال "images/watch1.jpg" (اتركه "" لإظهار رمز بدل الصورة)
+   icon  : رمز يظهر إذا ما كانت هناك صورة
+   ============================================================ */
+const PRODUCTS = [
+  { name: "ساعة كلاسيكية للرجال",   for: "رجالي", price: 0, image: "", icon: "⌚" },
+  { name: "نظارات شمسية عصرية",     for: "رجالي", price: 0, image: "", icon: "🕶️" },
+  { name: "سوار رجالي",             for: "رجالي", price: 0, image: "", icon: "📿" },
+  { name: "ساعة نسائية أنيقة",       for: "نسائي", price: 0, image: "", icon: "⌚" },
+  { name: "طقم مجوهرات",            for: "نسائي", price: 0, image: "", icon: "💎" },
+  { name: "حقيبة يد",               for: "نسائي", price: 0, image: "", icon: "👜" }
+];
+
+const PHONE = "213557372835";
+const grid = document.getElementById("grid");
+
+function fmt(n){ return n.toLocaleString("en-US").replace(/,/g, " "); }
+
+function render(filter){
+  grid.innerHTML = "";
+  PRODUCTS.filter(p => filter === "all" || p.for === filter).forEach(p => {
+    const msg = encodeURIComponent("السلام عليكم، أريد طلب: " + p.name);
+    const priceHTML = p.price > 0
+      ? fmt(p.price) + " <small>دج</small>"
+      : "<small>اسأل عن السعر</small>";
+    const media = p.image
+      ? '<img src="' + p.image + '" alt="' + p.name + '" loading="lazy">'
+      : p.icon;
+    const el = document.createElement("article");
+    el.className = "card";
+    el.innerHTML =
+      '<div class="thumb">' + media + '</div>' +
+      '<div class="body">' +
+        '<h3>' + p.name + '</h3>' +
+        '<span class="for">' + p.for + '</span>' +
+        '<div class="price">' + priceHTML + '</div>' +
+        '<a class="btn" target="_blank" rel="noopener" href="https://wa.me/' + PHONE + '?text=' + msg + '">اطلب عبر واتساب</a>' +
+      '</div>';
+    grid.appendChild(el);
+  });
+}
+
+document.getElementById("filters").addEventListener("click", e => {
+  const b = e.target.closest("button");
+  if(!b) return;
+  document.querySelectorAll("#filters button").forEach(x => x.setAttribute("aria-pressed", x === b));
+  render(b.dataset.f);
+});
+
+render("all");
+</script>
 </body>
 </html>
